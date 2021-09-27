@@ -49,7 +49,9 @@ export async function findAllUsers(request: Request, response: Response) {
 }
 
 export async function updateUser(request: Request, response: Response) {
-
+  // implements
 }
 
-export async function deleteUser(request: Request, response: Response) {}
+export async function deleteUser(request: Request, response: Response) {
+  // implements
+}
