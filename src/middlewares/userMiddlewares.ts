@@ -3,6 +3,7 @@ import { userModel } from "../database/models/userModel";
 import { v4 as uuidv4 } from "uuid";
 import { User } from "../types/User";
 import { dbConnect } from "../database/databaseConnection";
+import { encryptData } from "../utils/encrypt";
 
 export async function createUser(request: Request, response: Response) {
   const { fullName, email, password } = request.body;
@@ -12,7 +13,7 @@ export async function createUser(request: Request, response: Response) {
     const newUser: User = {
       fullName,
       email,
-      password,
+      password: await encryptData(password),
       delete: false,
       id: uuidv4(),
     };
