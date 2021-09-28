@@ -3,7 +3,7 @@ export type Achievement = {
   title: string;
   description: string;
   icon: string;
-  status: boolean;
   createAt: string;
-  conclusion?: string;
+  concluded: boolean;
+  concludedAt: string;
 };

@@ -8,4 +8,6 @@ export type List = {
   owner: User;
   participants: User[];
   type: string;
+  title: string,
+  description: string
 };
